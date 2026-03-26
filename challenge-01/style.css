@@ -1,25 +1,115 @@
 :root {
-    --spoiler-color: #000;
+  --bg: #0f172a;
+  --surface: #1e293b;
+  --surface-2: #334155;
+  --text: #f8fafc;
+  --muted: #cbd5e1;
+  --accent: #8b5cf6;
+  --accent-hover: #7c3aed;
+  --border: rgba(148, 163, 184, 0.2);
+
+  --radius: 16px;
+  --container: 70rem;
 }
 
-p {
-    line-height: 1.5em;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.post {
-    background: #e8eaed;
-    padding: 1em;
-    border-radius: 1em;
-    margin-bottom: 1em;
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  background: var(--bg);
+  color: var(--text);
 }
 
-.spoiler {
-    background: var(--spoiler-color);
-    color: var(--spoiler-color);
-    transition: all 0.5s ease-in;
+.container {
+  width: min(100% - 2rem, var(--container));
+  margin-inline: auto;
 }
 
-.spoiler:hover {
-    background: initial;
-    color: initial;
+header,
+footer {
+  padding: 1rem 0;
+}
+
+main {
+  padding: 2rem 0 3rem;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+}
+
+#themeToggle {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  padding: 0.65rem 0.9rem;
+  border-radius: 999px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.intro {
+  padding: 2rem 0;
+}
+
+.intro h2 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  max-width: 12ch;
+}
+
+.intro p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.spoilers .container {
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+
+.card h3 {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+}
+
+.spoiler-text {
+  margin: 0 0 1rem;
+  padding: 1rem;
+  background: var(--surface);
+  border-radius: 12px;
+  color: var(--muted);
+}
+
+.reveal-btn {
+  border: 0;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
 }
