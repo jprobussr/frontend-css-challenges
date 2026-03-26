@@ -109,11 +109,11 @@ header h1 {
 .spoiler-text {
   margin: 0 0 1rem;
   padding: 1rem;
-  background: var(--surface);
+  background: var(--surface-2);
   border-radius: 12px;
   color: var(--muted);
-
   flex-grow: 1;
+  display: none;
 }
 
 .reveal-btn {
@@ -141,14 +141,12 @@ footer p {
   text-align: center;
 }
 
-.hidden {
+.card.hidden .spoiler-text {
   display: none;
 }
 
-@media (min-width: 600px) {
-  .spoilers .container {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.card:not(.hidden) .spoiler-text {
+  display: block;
 }
 
 @media (min-width: 600px) {
