@@ -1,15 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Challenge 1</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spoiler Revealer</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Spoiler Revealer</h1>
+        <button id="themeToggle" aria-label="Toggle Theme">🌙</button>
+      </div>
+    </header>
 
+    <main>
+      <section class="intro">
+        <div class="container">
+          <h2>Careful… these are spoilers 👀</h2>
+          <p>Click reveal only if you're ready.</p>
+        </div>
+      </section>
+
+      <section class="spoilers">
+        <div class="container">
+          <article class="card">
+            <h3>Planet of the Apes (1968)</h3>
+            <p class="spoiler-text">They were on Earth the whole time.</p>
+            <button class="reveal-btn">Reveal Spoiler</button>
+          </article>
+        </div>
+      </section>
+
+      <footer>
+        <div class="container">
+          <p>CSS Challenges from Scrimba</p>
+          <p>Thank you, Treasure Porth</p>
+        </div>
+      </footer>
+    </main>
 
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>
