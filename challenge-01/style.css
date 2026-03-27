@@ -84,7 +84,7 @@ header h1 {
 .intro h2 {
   margin: 0 0 0.75rem;
   font-size: clamp(1.75rem, 5vw, 3rem);
-  max-width: 12ch;
+  max-width: 15ch;
 }
 
 .intro p {
