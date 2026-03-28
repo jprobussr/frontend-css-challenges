@@ -1,12 +1,15 @@
 :root {
-  --bg: #0f172a; /* main background */
-  --surface: #1e293b; /* cards / buttons */
-  --text: #f8fafc; /* main text */
-  --muted: #cbd5e1; /* secondary text */
-  --accent: #8b5cf6; /* accent color */
+  --bg: #081128;
+  --surface: #101a36;
+  --surface-2: #16203f;
+  --text: #f8fafc;
+  --muted: #cbd5e1;
+  --accent: #8b5cf6;
+  --accent-2: #f97316;
   --border: rgba(148, 163, 184, 0.2);
 
-  --radius: 6px;
+  --radius: 18px;
+  --container: 40rem;
 }
 
 *,
@@ -18,52 +21,72 @@
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
-  background-color: var(--bg);
+  line-height: 1.5;
+  background: var(--bg);
   color: var(--text);
+}
+
+button {
+  font: inherit;
 }
 
 .page {
   min-height: 100vh;
   display: grid;
   place-items: center;
+  padding: 1.5rem;
 }
 
-.coding-btn {
-  background: var(--surface);
-  color: var(--text);
-  border: 1px solid transparent;
-  padding: 0.9rem 1.6rem;
-  font-size: 1rem;
-  letter-spacing: 0.05em;
-  cursor: pointer;
+.button-lab {
+  width: min(100%, var(--container));
+  background: linear-gradient(
+    180deg,
+    rgba(22, 32, 63, 0.95),
+    rgba(16, 26, 54, 0.98)
+  );
+  border: 1px solid var(--border);
   border-radius: var(--radius);
-  transition: all 0.2s ease;
+  padding: 2rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
 }
 
-.coding-btn:hover {
-  border-color: var(--accent);
-  box-shadow: 0 0 12px rgba(139, 92, 246, 0.4);
-  transform: translateY(-2px);
+.eyebrow {
+  margin: 0 0 0.5rem;
+  color: var(--accent-2);
+  font-size: 0.875;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-.coding-btn:active {
-  transform: translateY(0);
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3rem);
 }
 
-.coding-btn:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 3px;
+.intro {
+  margin: 0.75rem 0 0;
+  max-width: 38ch;
+  color: var(--muted);
 }
 
-.button-border {
-  background: linear-gradient(90deg, #f97316, #d946ef);
-  padding: 2px;
-  display: inline-block;
-  border-radius: 6px;
-  transition: transform 0.2s ease;
+.button-row {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-.button-border:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(217, 70, 239, 0.5);
+.btn {
+  border: none;
+  border-radius: 12px;
+  padding: 0.9rem 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, var(--accent-2), var(--accent));
+  color: white;
 }
