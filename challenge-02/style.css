@@ -1,15 +1,15 @@
 :root {
-  --bg: #081128;
-  --surface: #101a36;
-  --surface-2: #16203f;
+  --bg: #060d22; /* darker */
+  --surface: #0f1a35; /* slightly lighter */
+  --surface-2: #162447; /* even lighter for buttons */
+
   --text: #f8fafc;
   --muted: #cbd5e1;
+
   --accent: #8b5cf6;
   --accent-2: #f97316;
-  --border: rgba(148, 163, 184, 0.2);
 
-  --radius: 18px;
-  --container: 40rem;
+  --border: rgba(148, 163, 184, 0.2);
 }
 
 *,
@@ -41,8 +41,8 @@ button {
   width: min(100%, var(--container));
   background: linear-gradient(
     180deg,
-    rgba(22, 32, 63, 0.95),
-    rgba(16, 26, 54, 0.98)
+    rgba(22, 36, 71, 0.95),
+    rgba(15, 26, 53, 0.98)
   );
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -84,9 +84,26 @@ h1 {
   font-weight: 700;
   letter-spacing: 0.02em;
   cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .btn-primary {
   background: linear-gradient(90deg, var(--accent-2), var(--accent));
-  color: white;
+  color: #fff;
+}
+
+.btn-secondary {
+  background: #1e2b52;
+  color: #fff;
+  border-color: rgba(148, 163, 184, 0.25);
+}
+
+.btn-ghost {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  border-color: rgba(148, 163, 184, 0.2);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
 }
