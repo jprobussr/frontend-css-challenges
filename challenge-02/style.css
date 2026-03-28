@@ -139,3 +139,69 @@ h1 {
   opacity: 0.7;
   cursor: wait;
 }
+
+.info-panel {
+  margin-top: 1.5rem;
+  padding: 1rem 1.25rem;
+  background: 1px solid var(--border);
+  border-radius: 14px;
+  color: var(--muted);
+}
+
+.info-panel p {
+  margin: 0;
+}
+
+.btn[aria-pressed='true'] {
+  background: #243663;
+  border-color: rgba(148, 163, 184, 0.35);
+  color: #fff;
+}
+
+.button-group-demo {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.group-label {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.icon-btn {
+  margin-top: 1rem;
+  width: 3rem;
+  aspect-ratio: 1;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  font: inherit;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.icon-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+}
+
+.icon-btn:active {
+  transform: translateY(0);
+}
+
+.icon-btn:focus-visible {
+  outline: 3px solid rgba(249, 115, 22, 0.45);
+  outline-offset: 3px;
+}

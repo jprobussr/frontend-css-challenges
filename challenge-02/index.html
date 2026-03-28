@@ -17,12 +17,34 @@
         </p>
 
         <div class="button-row">
-          <button class="btn btn-primary">Start Coding</button>
+          <button class="btn btn-primary" id="code-btn">Start Coding</button>
           <button class="btn btn-secondary">Save Progress</button>
           <button class="btn btn-ghost">Learn More</button>
 
           <button class="btn btn-primary" disabled>Disabled</button>
-          <button class="btn btn-primary" id="loadBtn">Submit</button>
+          <button class="btn btn-primary" id="load-btn">Submit</button>
+          <button class="btn btn-secondary" id="toggleBtn" aria-pressed="false">
+            Toggle Panel
+          </button>
+        </div>
+
+        <div class="info-panel" id="infoPanel">
+          <p>
+            Nice work - this panel is being controlled by a real toggle button
+            with accessible state.
+          </p>
+        </div>
+
+        <div class="button-group-demo">
+            <p class="group-label">Quick Actions</p>
+
+            <div class="button-group">
+                <button class="btn btn-secondary">Preview</button>
+                <button class="btn btn-secondary">Share</button>
+                <button class="btn btn-secondary">Export</button>
+            </div>
+
+            <button class="icon-btn" aria-label="Open settings">⚙️</button>
         </div>
       </section>
     </main>
